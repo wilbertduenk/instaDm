@@ -1,8 +1,8 @@
-from InstagramAPI import InstagramAPI
+from instabot import Bot
 
-# Authenticate with Instagram API
-api = InstagramAPI("your_username", "your_password")
-api.login()
+bot = Bot()
+bot.login(username="your_username", password="your_password")
 
 # Send a message to the user with the username "target_username"
-api.send_direct_item("target_username", "Hello! This is a message sent using the InstagramAPI library.")
+message = "Hello! This is a message sent using the instabot library."
+bot.direct_message(target_username, message)
